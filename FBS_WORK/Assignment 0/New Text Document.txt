@@ -1,6 +1,0 @@
-void main(){
-  int a = 5;
-  int b = 5;
-  int c = a + b;
-  printf("Addition of %d and %b is %d",a,b,c);
-}
