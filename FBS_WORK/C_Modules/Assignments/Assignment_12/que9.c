@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    char str1[100], str2[100];
+    int len1 = 0, len2 = 0;
+
+    printf("Enter first string: ");
+    fgets(str1, sizeof(str1), stdin);
+
+    printf("Enter second string: ");
+    fgets(str2, sizeof(str2), stdin);
+
+    while(str1[len1] != '\0')
+        len1++;
+
+    while(str2[len2] != '\0')
+        len2++;
+
+    if(len1 > len2)
+        printf("Larger String: %s", str1);
+    else
+        printf("Larger String: %s", str2);
+
+    return 0;
+}
