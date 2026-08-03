@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+struct Product
+{
+    int id;
+    char name[30];
+    int quantity;
+    float price;
+};
+
+void store(struct Product p[], int n)
+{
+    int i;
+
+    for(i=0;i<n;i++)
+    {
+        printf("\nEnter Product %d Details:\n",i+1);
+        scanf("%d%s%d%f",&p[i].id,p[i].name,&p[i].quantity,&p[i].price);
+    }
+}
+
+void display(struct Product p[], int n)
+{
+    int i;
+
+    printf("\nProduct Details\n");
+
+    for(i=0;i<n;i++)
+    {
+        printf("\n%d %s %d %.2f",
+        p[i].id,p[i].name,p[i].quantity,p[i].price);
+    }
+}
+
+void main()
+{
+    struct Product p[3];
+
+    store(p,3);
+    display(p,3);
+}
